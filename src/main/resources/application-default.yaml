@@ -1,0 +1,28 @@
+SERVER_PORT: 8000
+spring:
+  h2:
+    console:
+      enabled: 'true'
+    datasource:
+      initialization-mode: always
+      schema: classpath:schema.sql
+      data: classpath:data.sql
+
+JPA_USERNAME: sa
+JPA_URL: jdbc:h2:mem:dcbapp
+JPA_DRIVER: org.h2.Driver
+JPA_PASSWORD: InMemoryTestDBChatDoc
+JPA_DIALECT: org.hibernate.dialect.H2Dialect
+
+LOG_FILE: /var/www/jar/chatdoc/logs/chatdoc.log
+PICTURES_PATH: /var/www/jar/chatdoc/profiles/
+
+EMAIL_HOST: smtp.gmail.com
+EMAIL_PORT: 0
+EMAIL_USER: amcaballero2023@gmail.com
+EMAIL_PASSWORD: ""
+EMAIL_AUTH: true
+EMAIL_TLS: true
+OPT_EMAIL_SUBJECT: This is your OTP
+JWT_SECRET: ""
+JWT_EXPIRATION_MS: 86400000

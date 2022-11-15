@@ -1,0 +1,43 @@
+spring:
+  profiles:
+    active: default
+  application:
+    name: chatdoc
+  datasource:
+    username: ${JPA_USERNAME}
+    url: ${JPA_URL}
+    driverClassName: ${JPA_DRIVER}
+    password: ${JPA_PASSWORD}
+  jpa:
+    database-platform: ${JPA_DIALECT}
+    hibernate:
+      ddlAuto: none
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  mail:
+    host: ${EMAIL_HOST}
+    port: ${EMAIL_PORT}
+    username: ${EMAIL_USER}
+    password: ${EMAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: ${EMAIL_AUTH}
+          starttls:
+            enable: ${EMAIL_TLS}
+
+server:
+  port:
+    ${SERVER_PORT}
+
+logging:
+  level:
+    root: INFO
+  file:
+    name: ${LOG_FILE}
+picturesPath: ${PICTURES_PATH}
+otpSubject: ${OPT_EMAIL_SUBJECT}
+jwtSecret: ${JWT_SECRET}
+jwtExpirationMs: ${JWT_EXPIRATION_MS}
